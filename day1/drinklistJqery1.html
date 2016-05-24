@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic jQuery Dump</title>
+    <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+</head>
+<body>
+
+<!-- Created an empty HTML div. Note that there is no content -->
+<div id="drinkOptions"></div>
+
+<!-- Here we're adding a bit of CSS -->
+<style>
+    .fancy {
+        font-size: 100px;
+        color: green;
+    }
+</style>
+
+<script type="text/javascript">
+    // Array holds all of the drinks available
+    var drinkList = [
+        'Coffee: $5',
+        'Espresso: $7',
+        'Capunchino: $6',
+        'Latte: $4',
+        'Tea: $3',
+        'Ice Coffee: $6',
+        'Ice Espresso: $8',
+        'Ice Latte: $6',
+        'Ice Tea: $4'
+        ];
+    //var targetDiv = document.getElementById("drinkOptions");
+    //var drinkDiv = $("#drinkOptions");
+    // With jQuery we can easily inject full HTML.
+   
+    // If we needed each to be their own div, we could also create a new div
+    /*for(var i=0; i < drinkList.length; i++){
+        var newDiv = $('<div>');
+        newDiv.html(drinkList[i]);
+        $('#drinkOptions').append(newDiv);
+    }*/
+
+$.each(drinkList, function(i, e) {
+    $('#drinkOptions').append('<div>'+drinkList[i]+"</div>");
+});
+    
+    
+
+
+</script>
+
+</body>
+</html>

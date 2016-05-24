@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>lexicalScope</title>
+  </head>
+  <body style="">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+      <script type="text/javascript">
+      /*Take a few moments to dissect the code just sent to you.
+
+Try to predict what will be printed in each of the examples.
+
+Be prepared to share!
+
+Note: Pay attention to the unusual use of the keyword: 'this"
+*/
+        //EXAMPLE ONE global scope
+        var a = 1; 
+        function one(){
+          alert("One: " + a);
+        }
+        one(); // what will get alerted?  One: 1
+
+        //EXAMPLE TWO local scope
+        function twotop() {
+           function two(a) { 
+             alert("Two: " + this.a); 
+            }
+           two(a); // what will get alerted? Two: 1
+        }
+
+        twotop(); //Two: 1
+
+        //EXAMPLE THREE local scope
+        var a = 5;
+        function three() {
+          var a = 3;
+          alert("Three: " + a); // what will get alerted Three: 3
+        }
+        three(); // Three: 3
+
+        // EXAMPLE FOUR:
+        function first(){
+          var a = 5;
+          function second(){
+            var a = 3;
+            function third(){
+              alert("Four: " + a);  // what will get alerted? //Four: 3
+            }
+            third();
+          } 
+          second();
+        }
+        first();
+
+      </script>
+  </body>
+</html>

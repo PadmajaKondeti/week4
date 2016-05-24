@@ -1,0 +1,6 @@
+captain Planet
+1. initiak html tags
+2. ref to jquery
+3. key buttons
+4. jquery  click button
+5. change css  using jquery

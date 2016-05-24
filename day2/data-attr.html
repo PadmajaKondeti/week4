@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Data Attribute</title>
+	<style type="text/css">
+		.t{ 
+		height: 100px;
+		width: 100px;
+		}
+	</style>
+</head>
+<body>
+<div class="t" data-num="3" >CLICK ME</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript">
+	$('.t').on('click', function(event) {
+	var myVar = $(this).attr('data-num');
+	alert( myVar );
+	});
+</script>
+
+</body>
+</html>

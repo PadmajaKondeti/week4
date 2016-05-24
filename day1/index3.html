@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Content!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>Drink Selection!</h1>
+<hr>
+
+<!-- Here we create a generic drinkOptions div -->
+<div id="drinkOptions"></div>
+
+<script type="text/javascript">
+
+	// Array holds all of the drinks available
+	var drinkList = [
+        'Coffee: $5',
+        'Espresso: $7',
+        'Capunchino: $6',
+        'Latte: $4',
+        'Tea: $3',
+        'Ice Coffee: $6',
+        'Ice Espresso: $8',
+        'Ice Latte: $6',
+        'Ice Tea: $4'
+        ];
+
+    // Create code that "grabs" the div with the matching id (#drinkOptions);
+    // ...
+    //var targetDiv = document.getElementById("drinkOptions");
+    var drinkDiv = $("#drinkOptions");
+
+    // ...
+    
+
+	// Create a for loop that creates HTML content of all the drinks using Javascript.
+    var x;
+    for(var i=0; i< drinkList.length; i++){
+        var newDiv = $("div");
+        newDiv.html(drinkList[i]);
+       // drinkDiv.append(x);
+         $('#drinkOptions').push(newDiv);
+      // x = x + newDiv.html(drinkList[i]);
+
+        // Now let's combine both divs so we can see both
+        
+        //document.body.appendChild(newDiv);
+    }
+    
+	// HINT: You will need to use each of the following methods: createElement, innerHTML, appendChild
+	// ...
+
+
+
+
+	// ...
+
+
+</script>
+	
+</body>
+</html>
