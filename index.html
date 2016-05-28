@@ -3,51 +3,55 @@
 <head>
 	<title>Crystals Collector Game</title><!-- Added link to the jQuery Library -->
     <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+    
 
     <!-- Added a link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
 
 </head>
 <body>
 <!-- header and play button area -->
-	<div class="container" style="background-color:#999; margin-top:20px; margin-bottom:20px; padding:10px;">
-		
-		<div class="row">
-			<h3 style="text-align:center;"> Welcome to</h3>
-		</div>
-		<div class="row">
-			<h1 style="text-align:center;"> Crystal Collector Game!!</h1>
-		</div>
-		<div class="row">
-			<div class="col-sm-offset-4"><div>
-			<div class="col-sm-4">
-				<a style="" class="btn btn-success btn-lg " role="button">Let us Play</a>
-			</div>
-			<div class="col-sm-offset-4"></div>
-		</div>
-			
+<div id="main" class="container">
+	<div class="row"><h3> Welcome to</h3> </div>
+	<div class="row"><h1> Crystal Collector Game!!</h1> </div>
+	<div class="row">
+		<div class="col-sm-offset-4 col-sm-3"><a id="start" class="btn btn-success btn-lg" role="button">Let us Play</a></div>
 	</div>
+</div>
+
+
+
 <!-- score and result -->
-	<div class="container">
-		<div class="row">
-			<div class="col-sm-6" style="background-color:green; height:300px; color:#fff; text-align:center;">
+<div class="container">
+	<div class="row">
+		<div id="goal" class="result col-sm-6" >
+			
+			<div class="guess">
 				<h3>Your Crystal collection Goal </h3>
-				<div id="compGuess"></div>
+				<span id="compGuess"></span>
 			</div>
-			<div class="col-sm-6" style="background-color:blue; height:300px; color:#fff;">
-				<h3>Game Result:<span id="Result"></span></h3>
-				<h3>Wins:<span id="wins"></span></h3>
-				<h3>Losses: <span id="losses"></span></h3>
+			<hr/>
+			<div class="guess" >
+				<h3>Your total collection </h3>
+				<span id="yourTotal"></span>
 			</div>
 		</div>
-	</div>
-	<div class="container">
-		<div class="row" style="margin-top:20px;margin-bottom:20px;">
-			<div class="col-sm-3" ><a href="#"><img class="img-thumbnail" alt="crystal1"  src="../week4/assets/images/crystal1.jpg" /></a></div>
-			<div class="col-sm-3 " ><a href="#"><img class="img-thumbnail" alt="crystal2" src="../week4/assets/images/crystal2.jpg" /></a></div>
-			<div class="col-sm-3 " ><a href="#"><img class="img-thumbnail" alt="crystal3"  src="../week4/assets/images/crystal3.jpg" /></a></div>
-			<div class="col-sm-3" ><a href="#"><img class="img-thumbnail" alt="crystal4" src="../week4/assets/images/crystal4.jpg" /></a></div>
+		<div id="result" class="result col-sm-6">
+			<h3>Game Result:<span id="gameResult"></span></h3>
+			<h3>Wins:<span id="wins"></span></h3>
+			<h3>Losses: <span id="losses"></span></h3>
 		</div>
 	</div>
+</div>
+<div class="container" id="crystals">
+	<div class="row">
+		<div class="col-sm-3" ><a id="crystal1" href="#"><img class="img-thumbnail" alt="crystal1"  src="assets/images/crystal1.jpg" /></a></div>
+		<div class="col-sm-3 " ><a id="crystal2" href="#"><img class="img-thumbnail" alt="crystal2" src="assets/images/crystal2.jpg" /></a></div>
+		<div class="col-sm-3 " ><a id="crystal3" href="#"><img class="img-thumbnail" alt="crystal3"  src="assets/images/crystal3.jpg" /></a></div>
+		<div class="col-sm-3" ><a id="crystal4" href="#"><img class="img-thumbnail" alt="crystal4" src="assets/images/crystal4.jpg" /></a></div>
+	</div>
+</div>
+<script src="assets/js/main.js"></script>
 </body>	
 </html>

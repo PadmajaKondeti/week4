@@ -1,0 +1,34 @@
+.container{
+	margin-top:10px;
+	margin-bottom:10px;
+	text-align: center;
+	padding:20px;
+}
+#main{
+	background-color:#999;
+	text-align: center;
+	margin-top:30px;
+}
+#goal{
+	background-color:green; 
+	height:400px;
+	color:#fff;
+	text-align:center;
+}
+#result{
+	background-color:blue;
+	height:400px;
+	color:#fff;
+}
+.result{
+	padding-top: 20px;
+}
+.guess{
+	height: 150px;
+
+}
+#compGuess, #yourTotal{
+	font-size: 4em;
+
+	margin-bottom: 10px;
+}
