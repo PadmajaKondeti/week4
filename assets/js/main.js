@@ -60,19 +60,23 @@ var enable = function () {
 		//blink();
 	} else if (yourTotal < compGuess){
 		//try again to score more ponts
-		$("#gameResult").hdeml('Try again');
+		$("#gameResult").html('Try again');
 	}
 };
 $(document).ready(function(){
 	$("#start").on("click", function(e) {
-		compGuess =Math.ceil(Math.random() * 100);
+		var max =120;
+		var min = 19;
+		compGuess = Math.ceil(Math.random() * ((max-min+1)+min));
 		yourTotal=0;
 		start_flag=1; 
 		$("#compGuess").html(compGuess);
 		$("#yourTotal").html(yourTotal);
 		enable();
+		var max =12;
+		var min = 1;
 		for (var i= 0; i < 4; i++){
-			cryst[i] =Math.ceil(Math.random() * 50);
+			cryst[i] =Math.ceil(Math.random() * ((max-min+1)+min));
 		}
 	})
 	
