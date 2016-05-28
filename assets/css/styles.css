@@ -11,24 +11,24 @@
 }
 #goal{
 	background-color:green; 
-	height:400px;
+	  height:300px; 
 	color:#fff;
 	text-align:center;
 }
 #result{
 	background-color:blue;
-	height:400px;
+	 height:300px; 
 	color:#fff;
 }
 .result{
 	padding-top: 20px;
 }
 .guess{
-	height: 150px;
+	/* height: 150px; */
 
 }
 #compGuess, #yourTotal{
-	font-size: 4em;
+	font-size: 2em;
 
 	margin-bottom: 10px;
 }
