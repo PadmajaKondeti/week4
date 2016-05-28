@@ -1,21 +1,38 @@
-var compGuess =0 ,yourTotal = 0, wins=0, losses=0, cryst1=0, cryst2=0, cryst3=0, cryst4=0;
+var compGuess =0 ,yourTotal = 0, wins=0, losses=0, cryst=[], cryst1=0, cryst2=0, cryst3=0, cryst4=0;
 $(document).ready(function(){
+	debugger
 	$("#start").on("click", function(e) {
 		compGuess = Math.ceil(Math.random() * 100);
+		console.log('compGuess: ' + compGuess);
 		yourTotal=0;
 		$("#compGuess").html(compGuess);
 		$("#yourTotal").html(yourTotal);
 		$('#crystal1').attr("disabled",false);
-		toggleStatus();
+		for (var i= 0; i < 4; i++){
+			cryst[i] = Math.ceil(Math.random() * 50);
+			console.log('cryst['+i +']: ' + cryst[i]);
+		}
+		//toggleStatus();
 	})
-	$("#crystal1").on("click", function(e) {
-		cryst1 = Math.ceil(Math.random() * 50);
-		yourTotal = yourTotal + cryst1;
-		$("#yourTotal").html(yourTotal);
-		checkScore();
-		toggleStatus();
-	})
-	$("#crystal2").on("click", function(e) {
+	
+	$( ".crystal" ).each(function( index ) {
+		$(this).on("click", function(e) {
+			console.log(this);
+			yourTotal = yourTotal + cryst[index];
+			$("#yourTotal").html(yourTotal);
+			debugger
+			checkScore();
+			
+		})
+	});
+	/*for (var i= 0; i < 4; i++){
+		$("#crystal"+i).on("click", function(e) {
+			yourTotal = yourTotal + cryst+i;
+			$("#yourTotal").html(yourTotal);
+			checkScore();
+		})
+	}
+	/*$("#crystal2").on("click", function(e) {
 		cryst2 = Math.ceil(Math.random() * 50);
 		yourTotal = yourTotal + cryst2;
 		$("#yourTotal").html(yourTotal);
@@ -35,16 +52,19 @@ $(document).ready(function(){
 		$("#yourTotal").html(yourTotal);
 		checkScore();
 		toggleStatus();
-	})
+	}) */
 	function checkScore(){
+		debugger	
 		if (yourTotal > compGuess){
 			$("#gameResult").html('You Lost');
-			$("#compGuess").html(compGuess);
-			$("#yourTotal").html(yourTotal);
+			//$("#compGuess").html(compGuess);
+			//$("#yourTotal").html(yourTotal);
 			losses++;
 			$("#losses").html(losses);
 			debugger;
-			disable($("#crystal1"));
+			console.log("check"+this);
+			toggleStatus();
+			//disable($(this));
 			blink();
 		} else if (yourTotal == compGuess){
 			$("#gameResult").html('You Won');
@@ -52,32 +72,35 @@ $(document).ready(function(){
 			$("#yourTotal").html(0);
 			wins++;
 			$("#wins").html(wins);
-			function disable(){
-				$(this).attr("disabled","disabled");
-				};
+			//function disable(){
+			//	$(this).attr("disabled","disabled");
+			//	};
 			blink();
 		} else if (yourTotal < compGuess){
-			$("#gameResult").html('Try one more time');
+			$("#gameResult").html('Try again');
 		}
 	};
 	var blink = function() {
-    $('a#start').animate({
-        opacity: '0'
-    }, function(){
-        $(this).animate({
+    	$('a#start').animate({
+        	opacity: '0'
+    	}, function(){
+        	$(this).animate({
             opacity: '1'
-        }, blink);
+        	}, blink);
     });
-    function disable(){
-	   
-	    $(this).attr("disabled","disabled");
-	};
-	function toggleStatus() {
-	    if ($('#toggleElement').is(':checked')) {
-	        $('#crystal1').attr('disabled', true);
-	    } else {
-	        $('#crystal1').removeAttr('disabled');
-	    }   
+    //var disable = function(){
+	  //  $(this).attr("disabled","disabled");
+	//};
+	var toggleStatus=function () {
+		debugger
+		/*$( ".crystal" ).each(function( index ) {
+			$this = this;
+			if ($this.attr('disabled') == false) {
+		        $this.attr('disabled', true);
+		    } else {
+		         $this.attr('disabled', false);
+		    } 
+		})  */
 	}
 }
 
