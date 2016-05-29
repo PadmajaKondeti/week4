@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>StarWars RPG Game</title><!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+ 
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body>
+<!-- header and play button area -->
+<div id="move" class="container">
+	<div class="row"><h3> Welcome to</h3> </div>
+	<div class="row"><h2>StarWars RPG Game!!</h2> </div>
+	<div class="row">
+		<img id="character1" class="img-thumbnail character col-sm-3" alt="character1"  src="assets/images/crystal1.jpg"/>
+		<img id="character2" class="img-thumbnail character col-sm-3" alt="char2acter2" src="assets/images/crystal2.jpg"/>
+		<img id="character3" class="img-thumbnail character col-sm-3" alt="character3"  src="assets/images/crystal3.jpg"/>
+		<img id="character4" class="img-thumbnail character col-sm-3" alt="character4"  src="assets/images/crystal4.jpg"/>
+	</div>
+	<div class="row">
+		<div class="col-sm-3"><a id="start" class="btn btn-success btn-lg" role="button">Let us Play</a></div>
+	</div>
+</div>
+<!-- score and result -->
+<div class="container">
+
+ <input id="move" type="button" value="move" style="background-color:black">
+        <div class="post"><img src="1.jpeg"></div>
+        <div class="post"><img src="2.jpeg"></div>
+        <p>-----------------</p>
+ <div id="photoholder"></div>
+
+
+
+
+	<div class="row" id = "photoholder">
+
+	</div>
+	<div class="row">
+		<div id="goal" class="result col-sm-6" >
+			
+			<div class="guess">
+				<h3>Your Crystal collection Goal </h3>
+				<span id="compGuess"></span>
+			</div>
+			<hr/>
+			<div class="guess" >
+				<h3>Your total collection </h3>
+				<span id="yourTotal"></span>
+			</div>
+		</div>
+		<div id="result" class="result col-sm-6">
+			<h3>Game Result</h3>
+			<h4><span id="gameResult"></span></h4>
+			<hr/>
+			<h3>Wins:<span id="wins"></span></h3>
+			<h3>Losses: <span id="losses"></span></h3>
+		</div>
+	</div>
+</div>
+<div class="container" id="crystals">
+	<div class="row">
+		<div class="col-sm-3" >
+			<img id="crystal0"  class="img-thumbnail crystal" alt="crystal1"  src="assets/images/crystal1.jpg" />
+		</div>
+		<div class="col-sm-3" >
+			<img id="crystal1"  class="img-thumbnail crystal" alt="crystal2"  src="assets/images/crystal2.jpg" />
+		</div>
+			<div class="col-sm-3" >
+			<img id="crystal2"  class="img-thumbnail crystal" alt="crystal3"  src="assets/images/crystal3.jpg" />
+
+		</div>
+		<div class="col-sm-3" >
+			<img id="crystal3"  class="img-thumbnail crystal" alt="crystal4"  src="assets/images/crystal4.jpg" />
+		</div>
+	</div>
+</div>
+<script src="assets/js/starwarMain.js"></script>
+</body>	
+</html>
