@@ -1,0 +1,48 @@
+
+body{
+	background-image: url("../images/star-wars-bg.png");
+	}
+.container{
+	
+	
+	color:#fff;
+}
+
+#charYours .character{
+	border: solid green 3px;
+	float:left;
+	text-align:center;
+	background-color: #fff;
+}
+.img-thumbnail{
+	border: solid green 3px;
+}
+.chardetails{
+	color: #000;
+}
+#main{
+	margin-top:20px;
+}
+#goal{
+	background-color:green; 
+	  height:300px; 
+	color:#fff;
+	text-align:center;
+}
+#result{
+	background-color:blue;
+	 height:300px; 
+	color:#fff;
+}
+.result{
+	padding-top: 20px;
+}
+.guess{
+	/* height: 150px; */
+
+}
+#compGuess, #yourTotal{
+	font-size: 2em;
+
+	margin-bottom: 10px;
+}
