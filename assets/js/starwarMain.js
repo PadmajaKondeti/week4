@@ -15,7 +15,6 @@ function AddRestToEnemies() {
 			$('#charEnemies').append($this);
 		}
 	})
-	
 } 
 
 $(document).on('click', ".enemie", function AddToDefender() {
