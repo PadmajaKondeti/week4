@@ -1,64 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Crystals Collector Game</title><!-- Added link to the jQuery Library -->
-    <script src="https://code.jquery.com/jquery-2.2.3.js"></script>
- 
-    <!-- Added a link to Bootstrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<title>Week3 Games</title>
 </head>
 <body>
-<!-- header and play button area -->
-<div id="main" class="container">
-	<div class="row"><h3> Welcome to</h3> </div>
-	<div class="row"><h2> Crystal Collector Game!!</h2> </div>
-	<div class="row">
-		<div class="col-sm-offset-4 col-sm-3"><a id="start" class="btn btn-success btn-lg" role="button">Let us Play</a></div>
+	<header class="bgimage">
+	<div class="container">
+		<div class="row">
+			<nav class="navbar navbar-nav">
+				<div class="container">
+					<div class="navbar-header">
+	 					<h1>Week-4 Games</h1>
+					</div>
+				  
+				</div>
+			</nav>			
+		</div>
 	</div>
-</div>
-<!-- score and result -->
-<div class="container">
-	<div class="row">
-		<div id="goal" class="result col-sm-6" >
-			
-			<div class="guess">
-				<h3>Your Crystal collection Goal </h3>
-				<span id="compGuess"></span>
+	</header>
+	<div class="container">
+		<p></p>
+		<div class="row main">
+			<div class="btn-group" role="group" aria-label="...">
+  				<a type="button" class="btn btn-default" href="crystalCollector.html" alt="Crystals Collector">Crystals Collector Game</a>
+  				<a type="button" class="btn btn-default" href="hangman.html" alt="StarWars">StarWars Game</a>
 			</div>
-			<hr/>
-			<div class="guess" >
-				<h3>Your total collection </h3>
-				<span id="yourTotal"></span>
-			</div>
-		</div>
-		<div id="result" class="result col-sm-6">
-			<h3>Game Result</h3>
-			<h4><span id="gameResult"></span></h4>
-			<hr/>
-			<h3>Wins:<span id="wins"></span></h3>
-			<h3>Losses: <span id="losses"></span></h3>
 		</div>
 	</div>
-</div>
-<div class="container" id="crystals">
-	<div class="row">
-		<div class="col-sm-3" >
-			<img id="crystal0"  class="img-thumbnail crystal" alt="crystal1"  src="assets/images/crystal1.jpg" />
-		</div>
-		<div class="col-sm-3" >
-			<img id="crystal1"  class="img-thumbnail crystal" alt="crystal2"  src="assets/images/crystal2.jpg" />
-		</div>
-			<div class="col-sm-3" >
-			<img id="crystal2"  class="img-thumbnail crystal" alt="crystal3"  src="assets/images/crystal3.jpg" />
-
-		</div>
-		<div class="col-sm-3" >
-			<img id="crystal3"  class="img-thumbnail crystal" alt="crystal4"  src="assets/images/crystal4.jpg" />
-		</div>
-	</div>
-</div>
-<script src="assets/js/main.js"></script>
-</body>	
+</body>
 </html>
