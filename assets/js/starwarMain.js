@@ -11,7 +11,7 @@ function AddRestToEnemies() {
 			width:'187px',
 			left:'5px'
 			});
-			$this.css({'background-color': 'red', 'margin-right':'10px'});
+			$this.css({'background-color': 'red', 'margin':'5px'});
 			$('#charEnemies').append($this);
 		}
 	})
@@ -26,7 +26,7 @@ $(document).on('click', ".enemie", function AddToDefender() {
 		width:'187px',
 		left:'5px'
 	});
-	$this.css({'background-color': 'green'});
+	$this.css({'background-color': '#999', 'border': 'solid green 3px' });
 	$('#charDefender').append($this);
 });
 
